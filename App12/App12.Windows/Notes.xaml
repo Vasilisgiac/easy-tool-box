@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="App12.Notes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App12"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/okay23.png"/>
+        </Grid.Background>
+
+        <GridView 
+            x:Name="GridView1" 
+            Margin="134,140,0,30" 
+            CanDragItems="True" 
+            AllowDrop="True" 
+            CanReorderItems="True" 
+            IsItemClickEnabled="True" 
+            Padding="10,40,0,10" SelectionChanged="GridView1_SelectionChanged">
+            <GridView.Background>
+                <ImageBrush ImageSource="Assets/yoo.png"/>
+            </GridView.Background>
+        </GridView>
+        <Viewbox Margin="0,95,0,30">
+            <Grid Height="644" Width="1366">
+                <TextBox x:Name="text1" HorizontalAlignment="Left" Margin="299,0,0,0" Width="786" Visibility="Collapsed" TextWrapping="Wrap" KeyUp="text1_KeyUp" Padding="68,158,10,30" FontSize="26" Tag="ms-appx:/Assets/stock.png" Height="644" VerticalAlignment="Top">
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="Assets/stock.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBox x:Name="text2" HorizontalAlignment="Left" Margin="299,0,0,0" Width="786" TextWrapping="Wrap" Padding="68,158,10,30" FontSize="26" IsReadOnly="True" Visibility="Collapsed" Height="644" VerticalAlignment="Top"/>
+                <TextBox x:Name="text3" HorizontalAlignment="Left" Margin="299,0,0,0" Width="786" TextWrapping="Wrap" Padding="68,158,10,30" FontSize="20" IsReadOnly="True" Visibility="Collapsed" Height="644" VerticalAlignment="Top" Background="DarkGray" Text="INSTRUCTIONS&#xD;&#xA;&#xD;&#xA;Remove button: Deletes the chosen note&#xD;&#xA;Clear All button: Deletes all the saved notes&#xD;&#xA;Add button: Creates a new note&#xD;&#xA;Edit button: Opens the chosen note for edit&#xD;&#xA;Full button: Opens the chosen note only for read&#xD;&#xA;Save button: Saves the note at the current state&#xD;&#xA;Close button: Closes the opened note/current window" Foreground="White"  />
+
+                <AppBarButton x:Name="Close" HorizontalAlignment="Left" Height="86" Icon="Cancel" Label="Close" Margin="996,-10,0,0" VerticalAlignment="Top" Width="89" Click="Close_Click" Visibility="Collapsed"/>
+                <AppBarButton x:Name="Save" HorizontalAlignment="Left" Height="88" Icon="Save" Label="Save" Margin="895,-10,0,0" VerticalAlignment="Top" Width="87" Click="Save_Click" Visibility="Collapsed"/>
+            </Grid>
+        </Viewbox>
+
+        <CommandBar x:Name="Bar"  Background="DarkGray" Height="85" VerticalAlignment="Bottom" IsOpen="False">
+            <AppBarButton Label="Help" Icon="Help" Click="Help_Click"/>
+            <AppBarButton x:Name="Full" Label="Full" Icon="FullScreen" Click="Full_Click"/>
+            <AppBarButton x:Name="Clearall" Label="Clear All" Icon="Clear" Click="Clearall_Click"/>
+            <AppBarButton x:Name="Edit" Label="Edit" Icon="Edit" Click="Edit_Click" />
+            <AppBarButton x:Name="Remove" Label="Remove" Icon="Remove" Click="Remove_Click" />
+            <AppBarButton x:Name="Add" Label="Add" Icon="Add" Click="Add_Click" />
+
+            <CommandBar.SecondaryCommands>
+
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+        <AppBarButton x:Name="backbutton2" HorizontalAlignment="Left" Height="99" Label="Back" Style="{StaticResource BackAppBarButtonStyle1}" Margin="7,13,0,0" VerticalAlignment="Top" Width="133" Click="backbutton2_Click" Icon="Back" Foreground="DarkGray" Background="DarkGray" BorderBrush="DarkGray" RequestedTheme="Light"/>
+        <TextBlock x:Name="title" HorizontalAlignment="Left" Height="85" Margin="144,10,0,0" TextWrapping="Wrap" Text="My Notes" VerticalAlignment="Top" Width="690" FontSize="70" Foreground="Gray"/>
+        <CommandBar x:Name="Colorbar"  Height="85" VerticalAlignment="Top" Background="DarkGray">
+            <AppBarButton x:Name="Color1" Label="Red"   Background="Red" Style="{StaticResource AppBarButtonStyle3}" Click="Color1_Click"/>
+            <AppBarButton x:Name="Color2" Label="OrangeRed"  Background="OrangeRed" Style="{StaticResource AppBarButtonStyle2}" Click="Color2_Click"/>
+            <AppBarButton x:Name="Color3" Label="Aqua"  Background="Aqua" Style="{StaticResource AppBarButtonStyle1 }" Click="Color3_Click"/>
+            <AppBarButton x:Name="Color4" Label="LightGreen"  Background="LightGreen" Style="{StaticResource AppBarButtonStyle4 }" Click="Color4_Click"/>
+            <AppBarButton x:Name="Color5" Label="LightSalmon"  Background="LightSalmon" Style="{StaticResource AppBarButtonStyle5 }" Click="Color5_Click"/>
+            <AppBarButton x:Name="Color6" Label="HotPink"  Background="HotPink" Style="{StaticResource AppBarButtonStyle6 }" Click="Color6_Click"/>
+            <AppBarButton x:Name="Color7" Label="Goldenrod"  Background="Goldenrod" Style="{StaticResource AppBarButtonStyle7 }" Click="Color7_Click"/>
+            <AppBarButton x:Name="Color8" Label="GreenYellow"  Background="GreenYellow" Style="{StaticResource AppBarButtonStyle8 }" Click="Color8_Click"/>
+            <AppBarButton x:Name="Color9" Label="IndianRed"  Background="IndianRed" Style="{StaticResource AppBarButtonStyle9 }" Click="Color9_Click"/>
+            <AppBarButton x:Name="Color10" Label="LawnGreen"  Background="LawnGreen" Style="{StaticResource AppBarButtonStyle10 }" Click="Color10_Click"/>
+            <AppBarButton x:Name="Color11" Label="Orchid"  Background="Orchid" Style="{StaticResource AppBarButtonStyle11 }" Click="Color11_Click"/>
+            <AppBarButton x:Name="Color12" Label="Tomato"  Background="Tomato" Style="{StaticResource AppBarButtonStyle12 }" Click="Color12_Click"/>
+            <AppBarButton x:Name="Color13" Label="DodgerBlue"  Background="DodgerBlue" Style="{StaticResource AppBarButtonStyle13 }" Click="Color13_Click"/>
+            <AppBarButton x:Name="Color14" Label="SteelBlue"  Background="SteelBlue" Style="{StaticResource AppBarButtonStyle14 }" Click="Color14_Click"/>
+            <AppBarButton x:Name="Color15" Label="Coral"  Background="Coral" Style="{StaticResource AppBarButtonStyle15 }" Click="Color15_Click"/>
+            <CommandBar.SecondaryCommands>
+
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+
+
+
+
+
+
+
+    </Grid>
+
+</Page>

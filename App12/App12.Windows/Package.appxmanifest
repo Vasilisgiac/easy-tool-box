@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="30408BillJimDeveloping.EasyToolbox" Publisher="CN=2E9868D2-D820-46A0-BF04-8B78ED6CBD5F" Version="1.1.0.0" />
+  <Properties>
+    <DisplayName>Easy Toolbox</DisplayName>
+    <PublisherDisplayName>Bill &amp; Jim Developing</PublisherDisplayName>
+    <Logo>Assets\Appicon1_50x50.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="App12.Windows.App">
+      <m2:VisualElements DisplayName="Easy Toolbox" Square150x150Logo="Assets\Appicon1_150x150.png" Square30x30Logo="Assets\Appicon1_30x30.png" Description="Easy Toolbox" ForegroundText="dark" BackgroundColor="white">
+        <m2:DefaultTile Wide310x150Logo="Assets\Appicon1_310x150.png" Square70x70Logo="Assets\Appicon1_70x70.png" Square310x310Logo="Assets\Appicon1_310x310.png" DefaultSize="wide310x150Logo" ShortName="Easy Toolbox">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+            <m2:ShowOn Tile="wide310x150Logo" />
+            <m2:ShowOn Tile="square310x310Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\Appicon1.png" BackgroundColor="white" />
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="portrait" />
+          <m2:Rotation Preference="landscape" />
+          <m2:Rotation Preference="portraitFlipped" />
+          <m2:Rotation Preference="landscapeFlipped" />
+        </m2:InitialRotationPreference>
+        <m2:ApplicationView MinWidth="width500" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

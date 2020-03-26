@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="App12.theme"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App12"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid x:Name="theme1">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/vintage-wall-pattern-and-wood-floors-abstract-hd-wallpaper-1920x1200-4444.png"/>
+        </Grid.Background>
+        <Viewbox>
+            <Grid Height="768" Width="1366">
+                <Button x:Name="calculator" Content="" HorizontalAlignment="Left" Margin="178,235,0,0" VerticalAlignment="Top" Height="170" Width="293" Click="Button_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/closing-costs-calculator.jpg"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="notes" Content="" HorizontalAlignment="Left" Margin="580,235,0,0" VerticalAlignment="Top" Height="170" Width="293" Click="notes_Click">
+                    <Button.Foreground>
+                        <ImageBrush Stretch="Fill" ImageSource="Assets/notes.jpg"/>
+                    </Button.Foreground>
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="Assets/notes.jpg"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="Stopwatch" Content="" HorizontalAlignment="Left" Margin="966,235,0,0" VerticalAlignment="Top" Width="293" Height="170" Click="Stopwatch_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="Assets/chasy-rabochiy-stol-sekundomer.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock HorizontalAlignment="Left" Margin="181,402,0,0" TextWrapping="Wrap" Text="Calculator" VerticalAlignment="Top" Height="73" Width="287" FontSize="56" FontFamily="Edwardian Script ITC" Foreground="White"/>
+                <TextBlock HorizontalAlignment="Left" Margin="583,402,0,0" TextWrapping="Wrap" Text="Notes" VerticalAlignment="Top" Height="73" Width="287" FontSize="56" FontFamily="Edwardian Script ITC" Foreground="White"/>
+                <TextBlock HorizontalAlignment="Left" Margin="969,402,0,0" TextWrapping="Wrap" Text="Stopwatch" VerticalAlignment="Top" Height="73" Width="287" FontSize="56" FontFamily="Edwardian Script ITC" Foreground="White"/>
+                <AppBarButton HorizontalAlignment="Left" Icon="Setting" Label="Theme Change" Margin="1262,-4,0,0" VerticalAlignment="Top" Click="AppBarButton_Click"/>
+            </Grid>
+        </Viewbox>
+
+    </Grid>
+
+</Page>
